@@ -12,7 +12,7 @@ int main()
 	int menuInput = 0;
 	bool menuLoop = true;
 
-	while (menuLoop)
+	do
 	{
 		cout << "Welcome to the menu. Please select from the following options:" << endl;
 		cout << "Choose 1 for play game.\nChoose 2 for Multiplayer.\nChoose 3 for Options.\nChoose 4 for Credits.\n";
@@ -35,7 +35,7 @@ int main()
 		default: cout << "Invalid input. Please try again.\n";
 			break;
 		}
-	}
+	} while (menuLoop);
 
 	return 0;
 }
@@ -43,6 +43,13 @@ int main()
 void playGame()
 {
 	cout << "Playing game." << endl;
+
+	for (int i = 0; i < 10; i = i + 2)
+	{
+		cout << "i: " << i << endl;
+		for (int j = 0; j < 10; j++)
+			cout << "j: " << j << endl;
+	}
 }
 
 
